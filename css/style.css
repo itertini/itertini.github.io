@@ -1,10 +1,63 @@
+:root {
+  --dark-text-custom: #212529;
+  --dark-bg: #212121;
+  --accent-blue: #00bcd4;
+  --dark-blue: #191970;
+  --text-light: #FBFBFB;
+}
+
 html, body {
   height: 100%;
   width: 100%;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
 }
 
 #home {
-  height: 75vh;
+  height: 100vh;
+  position: relative;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: blur(1px);
+}
+
+.nav-link:hover {
+  color: var(--accent-blue) !important;
+}
+
+/* NAVBAR */
+.nav-link-hover::before,
+.nav-link-hover::after {
+  content: '';
+  opacity: 0;
+  transition: opacity 0.3s;
+  /*transition: background-color 0.5s ease-in-out;*/
+  /*background-color: greenyellow;*/
+  /*color: var(--dark-text-custom) !important;*/
+}
+
+.nav-link-hover::before {
+  content: '<';
+  margin-right: 0.25rem;
+  color: var(--accent-blue);
+}
+
+.nav-link-hover::after {
+  content: '/>';
+  margin-left: 0.25rem;
+  color: var(--accent-blue);
+}
+
+/* HOME */
+.nav-link-hover:hover::before,
+.nav-link-hover:hover::after {
+  opacity: 1;
 }
 
 .title {
@@ -13,4 +66,26 @@ html, body {
 
 .sub-title {
   font-size: 1.5rem;
+  color: var(--accent-blue) !important;
+}
+
+/* PROJECTS */
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 0.35s ease-in-out;
+  filter: drop-shadow(0 0 5px var(--accent-blue));
+}
+
+.col a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tech-icon {
+  width: 1.5rem;
+}
+
+/* CONTACT */
+label {
+  color: #6E7174;
 }
