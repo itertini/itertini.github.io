@@ -20,6 +20,19 @@ const projects = [
     },
 ]
 
+const tools = [
+    {
+        title: 'Phone Number Validator',
+        description: 'Validate phone numbers and get Provider',
+        link: '/util/number-checker.html'
+    },
+    {
+        title: 'Roman Numeral Converter',
+        description: 'Convert any decimal number to roman numeral ',
+        link: '/util/roman-converter.html'
+    },
+]
+
 const techStackImages = {
     html: './img/html.png',
     css: './img/css3.png',
@@ -63,6 +76,20 @@ function renderProjectElements() {
     }
 }
 
+function renderToolElements() {
+    const toolsDiv = document.querySelector('#tools');
+
+    for (let tool of tools) {
+        const row = document.createElement('div');
+        row.classList.add('tool-data')
+        row.innerHTML = `
+            <div class="tool-title"><a href="${tool.link}">${tool.title}</a></div>
+            <div class="tool-desc">${tool.description}</div>
+            `
+        toolsDiv.append(row);
+    }
+}
+
 function typeWriter() {
     const txt = 'Hey, I\'m Ideal';
 
@@ -75,6 +102,7 @@ function typeWriter() {
 
 document.addEventListener('load',
     renderProjectElements(),
+    renderToolElements(),
     particlesJS.load('particles-js', '../config/particlesjs-config.json'), () => {
         console.log('loaded')
     },

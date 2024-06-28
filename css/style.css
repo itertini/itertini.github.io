@@ -69,9 +69,30 @@ html, body {
   color: var(--accent-blue) !important;
 }
 
+/* TOOLS */
+.tools {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.tool-data {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tool-data a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--accent-blue);
+}
+
+
+
 /* PROJECTS */
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: transform 0.35s ease-in-out;
   filter: drop-shadow(0 0 5px var(--accent-blue));
 }
