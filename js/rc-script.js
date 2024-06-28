@@ -14,7 +14,7 @@ convertBtn.addEventListener('click', () => {
 })
 
 function handleInput() {
-    let inputNumber = parseInt(numStr.value);
+    let inputNumber = parseInt(numStr.value.replace(" ", ""));
     if (inputNumber > 3999) {
         output.textContent = 'Please enter a number less than or equal to 3999'
         output.style.display = 'block';
