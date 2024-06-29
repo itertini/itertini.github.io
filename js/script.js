@@ -31,6 +31,11 @@ const tools = [
         description: 'Convert any decimal number to roman numeral ',
         link: '/util/roman-converter.html'
     },
+    {
+        title: 'Spring Boot Generator',
+        description: 'Generates Controller, Service, Repository and Entity',
+        link: '/util/csr-generator.html'
+    },
 ]
 
 const techStackImages = {
