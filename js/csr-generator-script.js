@@ -7,12 +7,13 @@ const output = document.getElementById('output');
 inputForm.addEventListener('submit', submit);
 
 function submit(e) {
+    let id;
+
     e.preventDefault();
     renderNames('classname-upper', entityNameInput.value, toFirstLetterUpper);
     renderNames('classname-lower', entityNameInput.value, toFirstLetterLower);
     renderNames('package-name-output', packageNameInput.value, toFirstLetterLower);
-    renderNames('id-type-upper', idTypeInput.value, toFirstLetterUpper);
-    renderNames('id-type-lower', idTypeInput.value, toFirstLetterLower);
+    renderNames('id-type', idTypeInput.value, toFirstLetterUpper);
     
     output.style.display = 'block'
     // entityNameInput.value = '';

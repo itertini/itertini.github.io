@@ -28,6 +28,10 @@ body, html {
     font-size: 1.5rem !important;
 } */
 
+.version {
+    font-size: 0.8rem;
+}
+
 #input-form {
     background-color: var(--green);
 }
